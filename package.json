@@ -1,14 +1,18 @@
 {
+  "homepage": "https://mustafaraza2000.github.io/textutils",
   "name": "textutils",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.24.0",
     "web-vitals": "^4.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

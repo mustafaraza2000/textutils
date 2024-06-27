@@ -1,6 +1,6 @@
 //import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   let documenTitleAbout = () => {
@@ -14,13 +14,13 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} `}
     >
       <div className="container-fluid">
-        <Link
+        <a
           className="navbar-brand"
           onClick={props.changeDocumentTitle}
-          to="/"
+          href="#"
         >
           {props.title}
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -35,23 +35,19 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link
+              <a
                 className="nav-link active"
                 aria-current="page"
                 onClick={documenTitleHome}
-                to="/"
+                href="#"
               >
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                onClick={documenTitleAbout}
-                to="/about"
-              >
+              <a className="nav-link" onClick={documenTitleAbout} href="#">
                 {props.aboutText}
-              </Link>
+              </a>
             </li>
           </ul>
           <form className="d-flex" role="search">
